@@ -1,0 +1,26 @@
+####{BSB GENERATED: NO EDIT
+FLG -ppx '/Users/hanseungyoo/workspace/my/application-rush-test/common/temp/node_modules/.pnpm/rescript@9.1.4/node_modules/rescript/darwin/bsc.exe -as-ppx -bs-jsx 3'
+S /Users/hanseungyoo/workspace/my/application-rush-test/common/temp/node_modules/.pnpm/rescript@9.1.4/node_modules/rescript/lib/ocaml
+B /Users/hanseungyoo/workspace/my/application-rush-test/common/temp/node_modules/.pnpm/rescript@9.1.4/node_modules/rescript/lib/ocaml
+FLG -w +a-4-9-20-40-41-42-50-61-102-3-40-42-61
+S /Users/hanseungyoo/workspace/my/application-rush-test/apps/next-rescript-demo/node_modules/@rescript/react/lib/ocaml
+B /Users/hanseungyoo/workspace/my/application-rush-test/apps/next-rescript-demo/node_modules/@rescript/react/lib/ocaml
+S src/bindings
+B lib/bs/src/bindings
+S src/containers/indexPage
+B lib/bs/src/containers/indexPage
+S src/containers/example
+B lib/bs/src/containers/example
+S src/containers/app
+B lib/bs/src/containers/app
+S src/containers/context
+B lib/bs/src/containers/context
+S src/components/Article
+B lib/bs/src/components/Article
+S src/components/Greeting
+B lib/bs/src/components/Greeting
+S src/components/Test
+B lib/bs/src/components/Test
+S src/components/MyList
+B lib/bs/src/components/MyList
+####BSB GENERATED: NO EDIT}

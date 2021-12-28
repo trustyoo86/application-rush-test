@@ -96,7 +96,7 @@ module.exports = {
     'no-const-assign': 'error',
     'object-shorthand': 'error',
     'arrow-parens': ['off', 'as-needed', { requireForBlockBody: true }],
-    'no-duplicate-imports': 'error',
+    'no-duplicate-imports': 'off',
     'no-extra-boolean-cast': 'off',
     'react/jsx-boolean-value': 'error',
     'react/jsx-curly-spacing': ['error', 'never'],

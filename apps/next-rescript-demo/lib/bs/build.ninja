@@ -1,0 +1,52 @@
+rescript = 1
+g_finger := /Users/hanseungyoo/workspace/my/application-rush-test/apps/next-rescript-demo/node_modules/@rescript/react/lib/ocaml/install.stamp
+cleaner = /Users/hanseungyoo/workspace/my/application-rush-test/apps/next-rescript-demo/node_modules/gentype/gentype.exe
+rule astj
+  command = /Users/hanseungyoo/workspace/my/application-rush-test/common/temp/node_modules/.pnpm/rescript@9.1.4/node_modules/rescript/darwin/bsc.exe -w -3 -warn-error +101+8 -bs-v 9.1.4 -bs-jsx 3  -absname -bs-ast -o $out $i
+o src/bindings/Next.ast : astj ../../src/bindings/Next.res
+rule deps
+  command = /Users/hanseungyoo/workspace/my/application-rush-test/common/temp/node_modules/.pnpm/rescript@9.1.4/node_modules/rescript/darwin/bsb_helper.exe -hash af87297659ff65ac056ca4d51c61ff73 $in
+  restat = 1
+o src/bindings/Next.d : deps src/bindings/Next.ast
+rule mij
+  command = /Users/hanseungyoo/workspace/my/application-rush-test/common/temp/node_modules/.pnpm/rescript@9.1.4/node_modules/rescript/darwin/bsc.exe -I src/components/MyList -I src/components/Test -I src/components/Greeting -I src/components/Article -I src/components -I src/containers/context -I src/containers/app -I src/containers/example -I src/containers/indexPage -I src/containers -I src/bindings -I src -I /Users/hanseungyoo/workspace/my/application-rush-test/apps/next-rescript-demo/node_modules/@rescript/react/lib/ocaml  -w -3 -warn-error +101+8 -bs-gentype /Users/hanseungyoo/workspace/my/application-rush-test/apps/next-rescript-demo/node_modules/gentype/gentype.exe -bs-package-name next-rescript-demo -bs-package-output es6:$in_d:.mjs -bs-v $g_finger $i
+  dyndep = 1
+  restat = 1
+o src/bindings/Next.cmj src/bindings/Next.cmi ../../src/bindings/Next.mjs : mij src/bindings/Next.ast
+o src/containers/indexPage/Index.ast : astj ../../src/containers/indexPage/Index.res
+o src/containers/indexPage/Index.d : deps src/containers/indexPage/Index.ast
+o src/containers/indexPage/Index.cmj src/containers/indexPage/Index.cmi ../../src/containers/indexPage/Index.mjs : mij src/containers/indexPage/Index.ast
+o src/containers/example/Example.ast : astj ../../src/containers/example/Example.res
+o src/containers/example/Example.d : deps src/containers/example/Example.ast
+o src/containers/example/Example.cmj src/containers/example/Example.cmi ../../src/containers/example/Example.mjs : mij src/containers/example/Example.ast
+o src/containers/app/App.ast : astj ../../src/containers/app/App.res
+o src/containers/app/App.d : deps src/containers/app/App.ast src/containers/app/App.iast
+o src/containers/app/App.iast : astj ../../src/containers/app/App.resi
+rule mi
+  command = /Users/hanseungyoo/workspace/my/application-rush-test/common/temp/node_modules/.pnpm/rescript@9.1.4/node_modules/rescript/darwin/bsc.exe -I src/components/MyList -I src/components/Test -I src/components/Greeting -I src/components/Article -I src/components -I src/containers/context -I src/containers/app -I src/containers/example -I src/containers/indexPage -I src/containers -I src/bindings -I src -I /Users/hanseungyoo/workspace/my/application-rush-test/apps/next-rescript-demo/node_modules/@rescript/react/lib/ocaml  -w -3 -warn-error +101+8 -bs-gentype /Users/hanseungyoo/workspace/my/application-rush-test/apps/next-rescript-demo/node_modules/gentype/gentype.exe -bs-v $g_finger $i
+  dyndep = 1
+  restat = 1
+o src/containers/app/App.cmi : mi src/containers/app/App.iast
+rule mj
+  command = /Users/hanseungyoo/workspace/my/application-rush-test/common/temp/node_modules/.pnpm/rescript@9.1.4/node_modules/rescript/darwin/bsc.exe -bs-read-cmi -I src/components/MyList -I src/components/Test -I src/components/Greeting -I src/components/Article -I src/components -I src/containers/context -I src/containers/app -I src/containers/example -I src/containers/indexPage -I src/containers -I src/bindings -I src -I /Users/hanseungyoo/workspace/my/application-rush-test/apps/next-rescript-demo/node_modules/@rescript/react/lib/ocaml  -w -3 -warn-error +101+8 -bs-gentype /Users/hanseungyoo/workspace/my/application-rush-test/apps/next-rescript-demo/node_modules/gentype/gentype.exe -bs-package-name next-rescript-demo -bs-package-output es6:$in_d:.mjs -bs-v $g_finger $i
+  dyndep = 1
+  restat = 1
+o src/containers/app/App.cmj ../../src/containers/app/App.mjs : mj src/containers/app/App.ast src/containers/app/App.cmi
+o src/containers/context/ContextPage.ast : astj ../../src/containers/context/ContextPage.res
+o src/containers/context/ContextPage.d : deps src/containers/context/ContextPage.ast
+o src/containers/context/ContextPage.cmj src/containers/context/ContextPage.cmi ../../src/containers/context/ContextPage.mjs : mij src/containers/context/ContextPage.ast
+o src/components/Article/Article.ast : astj ../../src/components/Article/Article.res
+o src/components/Article/Article.d : deps src/components/Article/Article.ast
+o src/components/Article/Article.cmj src/components/Article/Article.cmi ../../src/components/Article/Article.mjs : mij src/components/Article/Article.ast
+o src/components/Greeting/Greeting.ast : astj ../../src/components/Greeting/Greeting.res
+o src/components/Greeting/Greeting.d : deps src/components/Greeting/Greeting.ast
+o src/components/Greeting/Greeting.cmj src/components/Greeting/Greeting.cmi ../../src/components/Greeting/Greeting.mjs : mij src/components/Greeting/Greeting.ast
+o src/components/Test/Test.ast : astj ../../src/components/Test/Test.res
+o src/components/Test/Test.d : deps src/components/Test/Test.ast
+o src/components/Test/Test.cmj src/components/Test/Test.cmi ../../src/components/Test/Test.mjs : mij src/components/Test/Test.ast
+o src/components/MyList/List.ast : astj ../../src/components/MyList/List.res
+o src/components/MyList/List.d : deps src/components/MyList/List.ast
+o src/components/MyList/List.cmj src/components/MyList/List.cmi ../../src/components/MyList/List.mjs : mij src/components/MyList/List.ast
+o src/components/MyList/Lists.ast : astj ../../src/components/MyList/Lists.res
+o src/components/MyList/Lists.d : deps src/components/MyList/Lists.ast
+o src/components/MyList/Lists.cmj src/components/MyList/Lists.cmi ../../src/components/MyList/Lists.mjs : mij src/components/MyList/Lists.ast

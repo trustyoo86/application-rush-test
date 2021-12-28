@@ -1,0 +1,18 @@
+9.1.4
+/Users/hanseungyoo/workspace/my/application-rush-test/apps/next-rescript-demo
+0
+bsconfig.json	0x1.872a6ca74dfbbp+30
+src	0x1.872a822e72e55p+30
+src/bindings	0x1.872a6ca788c15p+30
+src/containers	0x1.872abfa9a9772p+30
+src/containers/indexPage	0x1.872a7ada3af22p+30
+src/containers/example	0x1.872a7faa42ba8p+30
+src/containers/app	0x1.872a7a8f01213p+30
+src/containers/context	0x1.872abfc503fd2p+30
+src/components	0x1.872a99401c6f2p+30
+src/components/Article	0x1.872a90c76adbbp+30
+src/components/Greeting	0x1.872a962077887p+30
+src/components/Test	0x1.872a825acd86dp+30
+src/components/MyList	0x1.872abb52ed5d3p+30
+===
+/Users/hanseungyoo/workspace/my/application-rush-test/common/temp/node_modules/.pnpm/rescript@9.1.4/node_modules/rescript/darwin/rescript.exe	0x1.87291eb784767p+30

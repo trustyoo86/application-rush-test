@@ -1,0 +1,48 @@
+rescript = 1
+rule cp
+  command = cp $i $out
+rule touch
+ command = touch $out
+o Next.cmi : cp ../bs/src/bindings/Next.cmi
+o Next.cmj : cp ../bs/src/bindings/Next.cmj
+o Next.cmt : cp ../bs/src/bindings/Next.cmt
+o Next.res : cp ../../src/bindings/Next.res
+o Index.cmi : cp ../bs/src/containers/indexPage/Index.cmi
+o Index.cmj : cp ../bs/src/containers/indexPage/Index.cmj
+o Index.cmt : cp ../bs/src/containers/indexPage/Index.cmt
+o Index.res : cp ../../src/containers/indexPage/Index.res
+o Example.cmi : cp ../bs/src/containers/example/Example.cmi
+o Example.cmj : cp ../bs/src/containers/example/Example.cmj
+o Example.cmt : cp ../bs/src/containers/example/Example.cmt
+o Example.res : cp ../../src/containers/example/Example.res
+o App.cmi : cp ../bs/src/containers/app/App.cmi
+o App.cmj : cp ../bs/src/containers/app/App.cmj
+o App.cmt : cp ../bs/src/containers/app/App.cmt
+o App.res : cp ../../src/containers/app/App.res
+o App.resi : cp ../../src/containers/app/App.resi
+o App.cmti : cp ../bs/src/containers/app/App.cmti
+o ContextPage.cmi : cp ../bs/src/containers/context/ContextPage.cmi
+o ContextPage.cmj : cp ../bs/src/containers/context/ContextPage.cmj
+o ContextPage.cmt : cp ../bs/src/containers/context/ContextPage.cmt
+o ContextPage.res : cp ../../src/containers/context/ContextPage.res
+o Article.cmi : cp ../bs/src/components/Article/Article.cmi
+o Article.cmj : cp ../bs/src/components/Article/Article.cmj
+o Article.cmt : cp ../bs/src/components/Article/Article.cmt
+o Article.res : cp ../../src/components/Article/Article.res
+o Greeting.cmi : cp ../bs/src/components/Greeting/Greeting.cmi
+o Greeting.cmj : cp ../bs/src/components/Greeting/Greeting.cmj
+o Greeting.cmt : cp ../bs/src/components/Greeting/Greeting.cmt
+o Greeting.res : cp ../../src/components/Greeting/Greeting.res
+o Test.cmi : cp ../bs/src/components/Test/Test.cmi
+o Test.cmj : cp ../bs/src/components/Test/Test.cmj
+o Test.cmt : cp ../bs/src/components/Test/Test.cmt
+o Test.res : cp ../../src/components/Test/Test.res
+o List.cmi : cp ../bs/src/components/MyList/List.cmi
+o List.cmj : cp ../bs/src/components/MyList/List.cmj
+o List.cmt : cp ../bs/src/components/MyList/List.cmt
+o List.res : cp ../../src/components/MyList/List.res
+o Lists.cmi : cp ../bs/src/components/MyList/Lists.cmi
+o Lists.cmj : cp ../bs/src/components/MyList/Lists.cmj
+o Lists.cmt : cp ../bs/src/components/MyList/Lists.cmt
+o Lists.res : cp ../../src/components/MyList/Lists.res
+build install.stamp : touch Next.cmi Next.cmj Index.cmi Index.cmj Example.cmi Example.cmj App.cmi App.cmj ContextPage.cmi ContextPage.cmj Article.cmi Article.cmj Greeting.cmi Greeting.cmj Test.cmi Test.cmj List.cmi List.cmj Lists.cmi Lists.cmj 
