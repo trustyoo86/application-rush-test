@@ -524,6 +524,22 @@ packages:
       react-dom: 17.0.2_react@17.0.2
     dev: false
 
+  /@rescripts/rescript-use-eslint-config/0.0.11:
+    resolution: {integrity: sha512-rMdRunSosbLM2aGLJpjEnmkfQYm71NmObt6QR4h3e98+vk4in3xelk24vJYcMoCD3Gy/W3sL7IL58I4HGavHhA==}
+    dependencies:
+      '@rescripts/utilities': 0.0.7
+    transitivePeerDependencies:
+      - react-scripts
+    dev: false
+
+  /@rescripts/utilities/0.0.7:
+    resolution: {integrity: sha512-kdk4qvNYXOH7mVJCP/URokp5J+1HCR+tT1Zgtp8X9hLywn6WoKlU/tQ2ECB/NPOHrZjp/DGXWeQBAchLXV8q2w==}
+    peerDependencies:
+      react-scripts: 2 - 3
+    dependencies:
+      ramda: 0.26.1
+    dev: false
+
   /@rollup/pluginutils/4.1.2:
     resolution: {integrity: sha512-ROn4qvkxP9SyPeHaf7uQC/GPFY6L/OWy9+bd9AwcjOAWQwxRscoEyAUD8qCY5o5iL4jqQwoLk2kaTKJPb/HwzQ==}
     engines: {node: '>= 8.0.0'}
@@ -4368,6 +4384,10 @@ packages:
     engines: {node: '>=10'}
     dev: false
 
+  /ramda/0.26.1:
+    resolution: {integrity: sha512-hLWjpy7EnsDBb0p+Z3B7rPi3GDeRG5ZtiI33kJhTt+ORCd38AbAIjB/9zRIUoeTbE/AVX5ZkU7m6bznsvrf8eQ==}
+    dev: false
+
   /randombytes/2.1.0:
     resolution: {integrity: sha512-vYl3iOX+4CKUWuxGi9Ukhie6fsqXqS9FE2Zaic4tNFD2N2QQaXOMFbuKK4QmDHC0JO6B1Zp41J0LpT0oR68amQ==}
     dependencies:
@@ -5547,11 +5567,12 @@ packages:
     dev: false
 
   file:projects/next-rescript-demo.tgz:
-    resolution: {integrity: sha512-bVAR1NCnv9/2PYBYgyUby1hEmcIsks4v2GonUSaSUGXtkFtW+c81EMq9Pde9zH4Ix5Ze2GaT0X0/dMQS6NOHsg==, tarball: file:projects/next-rescript-demo.tgz}
+    resolution: {integrity: sha512-np9QkvhpLiyusJ26MSmjfrzUv0FyXqHtBlVSmbIZeEr3H2eOf6KlqL9Syjidu7cQu8iQFQ6e4n3vwui24lF7kA==, tarball: file:projects/next-rescript-demo.tgz}
     name: '@rush-temp/next-rescript-demo'
     version: 0.0.0
     dependencies:
       '@rescript/react': 0.10.3_react-dom@17.0.2+react@17.0.2
+      '@rescripts/rescript-use-eslint-config': 0.0.11
       bs-platform: 9.0.2
       gentype: 4.3.0
       next: 12.0.7_react-dom@17.0.2+react@17.0.2
@@ -5563,6 +5584,7 @@ packages:
       - '@babel/core'
       - fibers
       - node-sass
+      - react-scripts
       - sass
       - webpack
     dev: false
