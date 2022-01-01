@@ -391,6 +391,10 @@
     {
       "packageName": "@art/eslint-config",
       "projectFolder": "libs/eslint-config"
+    },
+    {
+      "packageName": "@art/react-scripts",
+      "projectFolder": "libs/react-scripts"
     }
     // {
     //   /**
