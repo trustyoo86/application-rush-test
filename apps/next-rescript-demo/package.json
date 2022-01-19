@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "next",
-    "re:start": "rescript build -w"
+    "re:start": "rescript build -w",
+    "build": ""
   },
   "author": "",
   "license": "ISC",

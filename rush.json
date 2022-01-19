@@ -389,6 +389,10 @@
       "projectFolder": "apps/next-rescript-demo"
     },
     {
+      "packageName": "next-radix-app",
+      "projectFolder": "apps/next-radix-app"
+    },
+    {
       "packageName": "@art/eslint-config",
       "projectFolder": "libs/eslint-config"
     },

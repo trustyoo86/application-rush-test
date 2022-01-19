@@ -15,7 +15,7 @@ const cache = args.includes('--no-cache')
 
 const files = parsedArgs._;
 
-const relativeEslintNodeModules = 'node_modules/@to/eslint-config';
+const relativeEslintNodeModules = 'node_modules/@art/eslint-config';
 const pluginsDirectory = `${appDirectory}/${relativeEslintNodeModules}`;
 
 const resolvePluginsRelativeTo = [
