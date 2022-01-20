@@ -5,6 +5,7 @@ module.exports = {
     loader: 'akamai',
     path: '',
   },
+  distDir: 'build',
   assetPrefix:
     'http://nextjs-deploy-practice.s3-website.ap-northeast-2.amazonaws.com',
   // generateBuildId: async () => {
