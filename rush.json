@@ -393,6 +393,10 @@
       "projectFolder": "apps/next-radix-app"
     },
     {
+      "packageName": "vite-react-app",
+      "projectFolder": "apps/vite-react-app"
+    },
+    {
       "packageName": "@art/eslint-config",
       "projectFolder": "libs/eslint-config"
     },
