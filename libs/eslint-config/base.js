@@ -74,7 +74,7 @@ module.exports = {
     'no-multi-spaces': 'error',
     'no-unused-expressions': ['error', { allowShortCircuit: true }],
     'no-unused-vars': [
-      'warn',
+      'off',
       {
         vars: 'all',
         varsIgnorePattern: '[I]\\w+',
@@ -113,6 +113,7 @@ module.exports = {
     'react/prop-types': 'off',
     'redux-saga/no-unhandled-errors': 'off',
     'react/display-name': 'off',
+    '@typescript-eslint/no-unused-vars': ['error'],
   },
   // overrides: [
   //   {
