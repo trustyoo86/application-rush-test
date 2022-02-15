@@ -2,7 +2,13 @@ import { IPostDto } from '@domains/dto/PostDto';
 import { IPostRepository } from '@domains/useCases/repositories/Post';
 
 class PostRepository implements IPostRepository {
-  posts: IPostDto[] = [];
+  posts: IPostDto[] = [
+    {
+      id: 0,
+      title: 'test',
+      content: 'test content',
+    },
+  ];
 
   async getPosts(): Promise<IPostDto[]> {
     return this.posts;

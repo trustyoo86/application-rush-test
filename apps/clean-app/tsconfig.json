@@ -17,7 +17,9 @@
     "baseUrl": ".",
     "paths": {
       "@domains/*": ["./src/domains/*"],
-      "@adapters/*": ["./src/adapters/*"]
+      "@adapters/*": ["./src/adapters/*"],
+      "@di": ["./src/frameworks/di/index.ts"],
+      "@components/*": ["./src/frameworks/components/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

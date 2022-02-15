@@ -33,10 +33,5 @@
   "engines": {
     "node": ">=14"
   },
-  "sideEffects": false,
-  "lint-staged": {
-    "app/**/*.{ts,tsx}": [
-      "react-scripts lint --fix --"
-    ]
-  }
+  "sideEffects": false
 }

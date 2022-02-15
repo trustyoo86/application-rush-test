@@ -1197,7 +1197,7 @@ packages:
       - supports-color
     dev: false
 
-  /@typescript-eslint/eslint-plugin/5.8.0_f9ce7edd1239aebc7b0c518ed6f6d2d1:
+  /@typescript-eslint/eslint-plugin/5.8.0_d4b9f0f29f709d704db9222b6851855c:
     resolution: {integrity: sha512-spu1UW7QuBn0nJ6+psnfCc3iVoQAifjKORgBngKOmC8U/1tbe2YJMzYQqDGYB4JCss7L8+RM2kKLb1B1Aw9BNA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -1208,17 +1208,17 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@typescript-eslint/experimental-utils': 5.8.0_eslint@8.6.0+typescript@4.5.4
-      '@typescript-eslint/parser': 5.8.0_eslint@8.6.0+typescript@4.5.4
+      '@typescript-eslint/experimental-utils': 5.8.0_eslint@8.8.0+typescript@4.5.5
+      '@typescript-eslint/parser': 5.8.0_eslint@8.8.0+typescript@4.5.5
       '@typescript-eslint/scope-manager': 5.8.0
       debug: 4.3.3
-      eslint: 8.6.0
+      eslint: 8.8.0
       functional-red-black-tree: 1.0.1
       ignore: 5.2.0
       regexpp: 3.2.0
       semver: 7.3.5
-      tsutils: 3.21.0_typescript@4.5.4
-      typescript: 4.5.4
+      tsutils: 3.21.0_typescript@4.5.5
+      typescript: 4.5.5
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -1240,7 +1240,7 @@ packages:
       - typescript
     dev: false
 
-  /@typescript-eslint/experimental-utils/5.8.0_eslint@8.6.0+typescript@4.5.4:
+  /@typescript-eslint/experimental-utils/5.8.0_eslint@8.8.0+typescript@4.5.5:
     resolution: {integrity: sha512-KN5FvNH71bhZ8fKtL+lhW7bjm7cxs1nt+hrDZWIqb6ViCffQcWyLunGrgvISgkRojIDcXIsH+xlFfI4RCDA0xA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
@@ -1249,10 +1249,10 @@ packages:
       '@types/json-schema': 7.0.9
       '@typescript-eslint/scope-manager': 5.8.0
       '@typescript-eslint/types': 5.8.0
-      '@typescript-eslint/typescript-estree': 5.8.0_typescript@4.5.4
-      eslint: 8.6.0
+      '@typescript-eslint/typescript-estree': 5.8.0_typescript@4.5.5
+      eslint: 8.8.0
       eslint-scope: 5.1.1
-      eslint-utils: 3.0.0_eslint@8.6.0
+      eslint-utils: 3.0.0_eslint@8.8.0
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -2807,13 +2807,13 @@ packages:
       eslint: '>=7.0.0'
     dev: false
 
-  /eslint-config-prettier/8.3.0_eslint@8.6.0:
+  /eslint-config-prettier/8.3.0_eslint@8.8.0:
     resolution: {integrity: sha512-BgZuLUSeKzvlL/VUjx/Yb787VQ26RU3gGjA3iiFvdsp/2bMfVIWUVP7tjxtjS0e+HP409cPlPvNkQloz8C91ew==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
     dependencies:
-      eslint: 8.6.0
+      eslint: 8.8.0
     dev: false
 
   /eslint-import-resolver-node/0.3.6:
@@ -2953,6 +2953,22 @@ packages:
       minimatch: 3.0.4
     dev: false
 
+  /eslint-plugin-prettier/4.0.0_7d1a077e808caaf0f8cce23c83ea4a14:
+    resolution: {integrity: sha512-98MqmCJ7vJodoQK359bqQWaxOE0CS8paAz/GgjaZLyex4TTk3g9HugoO89EqWCrFiOqn9EVvcoo7gZzONCWVwQ==}
+    engines: {node: '>=6.0.0'}
+    peerDependencies:
+      eslint: '>=7.28.0'
+      eslint-config-prettier: '*'
+      prettier: '>=2.0.0'
+    peerDependenciesMeta:
+      eslint-config-prettier:
+        optional: true
+    dependencies:
+      eslint: 8.8.0
+      eslint-config-prettier: 8.3.0_eslint@8.8.0
+      prettier-linter-helpers: 1.0.0
+    dev: false
+
   /eslint-plugin-prettier/4.0.0_eslint-config-prettier@8.3.0:
     resolution: {integrity: sha512-98MqmCJ7vJodoQK359bqQWaxOE0CS8paAz/GgjaZLyex4TTk3g9HugoO89EqWCrFiOqn9EVvcoo7gZzONCWVwQ==}
     engines: {node: '>=6.0.0'}
@@ -2965,22 +2981,6 @@ packages:
         optional: true
     dependencies:
       eslint-config-prettier: 8.3.0
-      prettier-linter-helpers: 1.0.0
-    dev: false
-
-  /eslint-plugin-prettier/4.0.0_fca46e11a1e806700c7f2f50fa8bcaf7:
-    resolution: {integrity: sha512-98MqmCJ7vJodoQK359bqQWaxOE0CS8paAz/GgjaZLyex4TTk3g9HugoO89EqWCrFiOqn9EVvcoo7gZzONCWVwQ==}
-    engines: {node: '>=6.0.0'}
-    peerDependencies:
-      eslint: '>=7.28.0'
-      eslint-config-prettier: '*'
-      prettier: '>=2.0.0'
-    peerDependenciesMeta:
-      eslint-config-prettier:
-        optional: true
-    dependencies:
-      eslint: 8.6.0
-      eslint-config-prettier: 8.3.0_eslint@8.6.0
       prettier-linter-helpers: 1.0.0
     dev: false
 
@@ -3146,7 +3146,7 @@ packages:
       escape-string-regexp: 4.0.0
       eslint-scope: 7.1.0
       eslint-utils: 3.0.0_eslint@8.6.0
-      eslint-visitor-keys: 3.1.0
+      eslint-visitor-keys: 3.2.0
       espree: 9.3.0
       esquery: 1.4.0
       esutils: 2.0.3
@@ -3782,6 +3782,10 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       duplexer: 0.1.2
+    dev: false
+
+  /hamt_plus/1.0.2:
+    resolution: {integrity: sha1-4hwlKWjH4zsg9qGwlM2FeHomVgE=}
     dev: false
 
   /hard-rejection/2.1.0:
@@ -6020,6 +6024,23 @@ packages:
       picomatch: 2.3.0
     dev: false
 
+  /recoil/0.6.1_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-J7oT3LZl2vpyFClgSUpOQjpykz84VSX/NJE/PavAtR8n7Z+whEdVBPUtwc2TEWjONeL/lJmiac2XQ+qEOQA52Q==}
+    peerDependencies:
+      react: '>=16.13.1'
+      react-dom: '*'
+      react-native: '*'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    dependencies:
+      hamt_plus: 1.0.2
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    dev: false
+
   /recursive-readdir/2.2.2:
     resolution: {integrity: sha512-nRCcW9Sj7NuZwa2XvH9co8NPeXUBhZP7CRKJtU+cS6PW9FpCIFoI5ib0NT1ZrbNuPoRy0ylyCaUL8Gih4LSyFg==}
     engines: {node: '>=0.10.0'}
@@ -7227,7 +7248,7 @@ packages:
     dev: false
 
   file:projects/clean-app.tgz:
-    resolution: {integrity: sha512-b0cQSebMirJk7imtrMxjqMD2/vnTWd/K+M8XYwoz3Hk7pHWgKFvg2GRK2IpNlF4xTUgkbrbd+kN6bL67iTMgIA==, tarball: file:projects/clean-app.tgz}
+    resolution: {integrity: sha512-OeV6FTIIhuFlrrwUJmMi4ys9E6XtxyrrEtlkPIRv8BNhs1VSuPNDTGo8YeIlrCPUaZ03gsWm0pm86D/TUvoycg==, tarball: file:projects/clean-app.tgz}
     name: '@rush-temp/clean-app'
     version: 0.0.0
     dependencies:
@@ -7238,12 +7259,14 @@ packages:
       next: 12.0.10_react-dom@17.0.2+react@17.0.2
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
+      recoil: 0.6.1_react-dom@17.0.2+react@17.0.2
       typescript: 4.5.5
     transitivePeerDependencies:
       - '@babel/core'
       - babel-plugin-macros
       - fibers
       - node-sass
+      - react-native
       - sass
       - supports-color
     dev: false
@@ -7253,14 +7276,14 @@ packages:
     name: '@rush-temp/eslint-config'
     version: 0.0.0
     dependencies:
-      '@typescript-eslint/eslint-plugin': 5.8.0_f9ce7edd1239aebc7b0c518ed6f6d2d1
-      '@typescript-eslint/parser': 5.8.0_eslint@8.6.0+typescript@4.5.4
-      eslint: 8.6.0
-      eslint-config-prettier: 8.3.0_eslint@8.6.0
-      eslint-plugin-prettier: 4.0.0_fca46e11a1e806700c7f2f50fa8bcaf7
-      eslint-plugin-react: 7.27.1_eslint@8.6.0
+      '@typescript-eslint/eslint-plugin': 5.8.0_d4b9f0f29f709d704db9222b6851855c
+      '@typescript-eslint/parser': 5.8.0_eslint@8.8.0+typescript@4.5.5
+      eslint: 8.8.0
+      eslint-config-prettier: 8.3.0_eslint@8.8.0
+      eslint-plugin-prettier: 4.0.0_7d1a077e808caaf0f8cce23c83ea4a14
+      eslint-plugin-react: 7.27.1_eslint@8.8.0
       path: 0.12.7
-      typescript: 4.5.4
+      typescript: 4.5.5
     transitivePeerDependencies:
       - prettier
       - supports-color
@@ -7299,18 +7322,18 @@ packages:
       '@rescripts/rescript-use-eslint-config': 0.0.11
       bs-platform: 9.0.2
       gentype: 4.3.0
-      next: 12.0.7_react-dom@17.0.2+react@17.0.2
+      next: 12.0.10_react-dom@17.0.2+react@17.0.2
       next-transpile-modules: 9.0.0
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       rescript: 9.1.4
     transitivePeerDependencies:
       - '@babel/core'
+      - babel-plugin-macros
       - fibers
       - node-sass
       - react-scripts
       - sass
-      - webpack
     dev: false
 
   file:projects/react-scripts.tgz:
@@ -7340,7 +7363,7 @@ packages:
       '@remix-run/dev': 1.1.1
       '@remix-run/express': 1.1.1_c249933f376ca18b25ea8a9b07171fbd
       '@remix-run/react': 1.1.1_react-dom@17.0.2+react@17.0.2
-      '@types/react': 17.0.38
+      '@types/react': 17.0.39
       '@types/react-dom': 17.0.11
       compression: 1.7.4
       cross-env: 7.0.3
@@ -7349,7 +7372,7 @@ packages:
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
       remix: 1.1.1
-      typescript: 4.5.4
+      typescript: 4.5.5
     transitivePeerDependencies:
       - bufferutil
       - supports-color
@@ -7361,12 +7384,12 @@ packages:
     name: '@rush-temp/vite-react-app'
     version: 0.0.0
     dependencies:
-      '@types/react': 17.0.38
+      '@types/react': 17.0.39
       '@types/react-dom': 17.0.11
       '@vitejs/plugin-react': 1.1.4
       react: 17.0.2
       react-dom: 17.0.2_react@17.0.2
-      typescript: 4.5.4
+      typescript: 4.5.5
       vite: 2.7.13
     transitivePeerDependencies:
       - less
