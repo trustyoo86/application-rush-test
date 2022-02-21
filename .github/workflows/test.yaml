@@ -7,6 +7,17 @@ on:
         description: 'Log level'
         required: true
         default: 'warning'
+      apps:
+        type: choice
+        description: '타겟 App'
+        options:
+          - Admin
+          - Webview
+
 jobs:
-  build:
+  greet:
     runs-on: ubuntu-latest
+
+    steps:
+      - name: Send greeting
+        run: echo "${{ github.event.inputs.apps }}"
