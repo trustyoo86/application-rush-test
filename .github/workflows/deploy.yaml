@@ -21,5 +21,5 @@ jobs:
   amplify-webhook:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checktout@v2
+      - uses: actions/checkout@v2
       - run: curl -X POST -d {} "https://webhooks.amplify.ap-northeast-2.amazonaws.com/prod/webhooks?id=5d912f30-d827-4c75-a9ee-a32254d4b526&token=StJgQUQU7B7P7DsUgD0p1QhtcQUblSB7GNoX5IA7BM&amp;operation=startbuild" -H "Content-Type:application/json"
