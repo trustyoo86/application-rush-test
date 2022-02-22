@@ -12,13 +12,24 @@ name: Deploy
 on:
   workflow_dispatch:
     inputs:
-      region:
-        description: 'AWS Region to deploy to'
+      environment:
+        description: '배포 환경 선택'
         required: true
-        default: 'ap-northeast-2'
+        default: 'develop'
+        type: choice
+        options:
+          - develop
+          - prod
 
 jobs:
-  amplify-webhook:
+  trigger-amplify-main:
+    if: ${{github.event.inputs.environment == 'prod'}}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: curl -X POST -d {} "https://webhooks.amplify.ap-northeast-2.amazonaws.com/prod/webhooks?id=5d912f30-d827-4c75-a9ee-a32254d4b526&token=StJgQUQU7B7P7DsUgD0p1QhtcQUblSB7GNoX5IA7BM&amp;operation=startbuild" -H "Content-Type:application/json"
+  trigger-amplify-develop:
+    if: ${{github.event.inputs.environment == 'develop'}}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
