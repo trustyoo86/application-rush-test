@@ -11,22 +11,6 @@ name: Deploy
 
 on:
   workflow_dispatch:
-    branches:
-      - main
-      - develop
-    inputs:
-      environment:
-        description: '배포 환경 선택'
-        required: true
-        default: 'develop'
-        type: choice
-        options:
-          - develop
-          - prod
-      environments:
-        description: 'Environment to run tests against'
-        type: environment
-        required: true
 
 jobs:
   trigger-amplify-main:
