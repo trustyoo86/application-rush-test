@@ -40,7 +40,7 @@ jobs:
       - name: install, build and test
         run: npm i -g @microsoft/rush
           rush update
-          rush build:dev -t=@lifeplus/web
+          rush build -t=next-radix-app
 
       - name: deploy
         uses: ambientlight/amplify-cli-action@0.3.0

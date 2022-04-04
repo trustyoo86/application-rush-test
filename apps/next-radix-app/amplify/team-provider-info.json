@@ -8,7 +8,7 @@
       "DeploymentBucketName": "amplify-nextradixapp-dev-103303-deployment",
       "UnauthRoleName": "amplify-nextradixapp-dev-103303-unauthRole",
       "StackName": "amplify-nextradixapp-dev-103303",
-      "StackId": "arn:aws:cloudformation:ap-northeast-2:123670266230:stack/amplify-nextradixapp-dev-103303/2bf64670-b3b7-11ec-8941-06ae7858c676",
+      "StackId": "arn:aws:cloudformation:ap-northeast-2:123670266230:stack/amplify-nextradixapp-dev-103303/bacdd710-b3d9-11ec-bb4e-06a7148c5c78",
       "AmplifyAppId": "dqhfro669bxei"
     }
   }
