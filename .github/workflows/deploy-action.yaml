@@ -28,7 +28,7 @@ jobs:
       - name: configure amplify
         uses: ambientlight/amplify-cli-action@0.3.0
         with:
-          amplify_command: configure
+          amplify_command: add_env
           amplify_env: prod
           amplify_cli_version: '7.6.26'
           project_dir: './apps/next-radix-app'
@@ -36,7 +36,6 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS-ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ap-northeast-2
-          LP_APP_STAGE: dev
 
       - name: install, build and test
         run: npm i -g @microsoft/rush
@@ -47,11 +46,9 @@ jobs:
         uses: ambientlight/amplify-cli-action@0.3.0
         with:
           amplify_command: publish
-          amplify_env: prod
           amplify_cli_version: '7.6.26'
           project_dir: './apps/next-radix-app'
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS-ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ap-northeast-2
-          LP_APP_STAGE: dev
