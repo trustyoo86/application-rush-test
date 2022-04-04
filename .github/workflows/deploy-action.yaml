@@ -1,0 +1,54 @@
+name: 'Amplify Deploy monorepo'
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: '배포 환경 선택'
+        required: true
+        default: 'develop'
+        type: choice
+        options:
+          - develop
+          - prod
+jobs:
+  start:
+    name: amplify-cli-action start
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x]
+
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: use node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+
+      - name: configure amplify
+        uses: ambientlight/amplify-cli-action@0.3.0
+        with:
+          amplify_command: configure
+          amplify_env: prod
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS-ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ap-northeast-2
+          LP_APP_STAGE: dev
+
+      - name: install, build and test
+        run: npm i -g @microsoft/rush
+          rush update
+          rush build:dev -t=@lifeplus/web
+
+      - name: deploy
+        uses: ambientlight/amplify-cli-action@0.3.0
+        with:
+          amplify_command: publish
+          amplify_env: prod
+          project_dir: /apps/next-radix-app
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS-ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ap-northeast-2
+          LP_APP_STAGE: dev
