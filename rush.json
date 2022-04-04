@@ -403,6 +403,10 @@
     {
       "packageName": "@art/react-scripts",
       "projectFolder": "libs/react-scripts"
+    },
+    {
+      "packageName": "react-18-app",
+      "projectFolder": "apps/react-18-app"
     }
     // {
     //   /**
