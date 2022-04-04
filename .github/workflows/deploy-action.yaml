@@ -45,7 +45,7 @@ jobs:
       - name: deploy
         uses: ambientlight/amplify-cli-action@0.3.0
         with:
-          amplify_command: publish
+          amplify_command: push
           amplify_cli_version: '7.6.26'
           project_dir: './apps/next-radix-app'
         env:
