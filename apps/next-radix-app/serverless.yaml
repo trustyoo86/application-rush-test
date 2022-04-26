@@ -1,0 +1,52 @@
+service: nextjs-serverless
+
+plugins:
+  - serverless-offline
+  # - serverless-domain-manager
+
+# include:
+#   - .next/**
+#   - public/**
+#   - server.js
+
+custom:
+  serverless-offline:
+    httpPort: 3000
+    lambdaPort: 3001
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: prod
+  region: ${file(./config.json):region}
+  vpc: ${file(./config.json):vpc}
+  iamRoleStatements:
+    - Effect: 'Allow'
+      Action:
+        - 'lambda:InvokeFunction'
+      Resource:
+        - '*'
+  resourcePolicy:
+    - Effect: 'Allow'
+      Principal: '*'
+      Action: execute-api:Invoke
+      Resource:
+        - execute-api:/*/*/*
+      Condition:
+        StringEquals:
+          aws:sourceVpce:
+            - ${file(./config.json):vpce}
+
+functions:
+  server:
+    description: nextjs-serverless server handler
+    handler: server/serverless/serverless.handler
+    memorySize: 128
+    tracing: true
+    events:
+      - http:
+          path: /
+          method: ANY
+      - http:
+          path: /{proxy+}
+          method: ANY
