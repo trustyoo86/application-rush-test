@@ -1,11 +1,11 @@
-const next = require('next');
-const routes = require('../routes');
-const app = require('../app');
+import next from 'next';
+import routes from '../routes';
+import app from '../app';
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 const nextApp = next({
-  dev: true,
+  dev: global.__STAGE__ === 'local',
 });
 
 const requestHandler = nextApp.getRequestHandler();
