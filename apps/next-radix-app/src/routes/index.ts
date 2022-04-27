@@ -1,8 +1,8 @@
 const routes = [
   {
     path: '/',
-    page: 'index',
+    page: '/index',
   },
 ];
 
-module.exports = routes;
+export default routes;

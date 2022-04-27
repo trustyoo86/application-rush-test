@@ -1,7 +1,7 @@
-const awsServerlessExpress = require('aws-serverless-express');
-const { resolve } = require('path');
-const app = require('../app');
-const routes = require('../routes');
+import awsServerlessExpress from 'aws-serverless-express';
+import { resolve } from 'path';
+import app from '../app';
+import routes from '../routes';
 
 const binaryMimeTypes = [
   'application/javascript',
@@ -23,7 +23,7 @@ const binaryMimeTypes = [
   'text/xml',
 ];
 
-exports.handler = (event, context) => {
+export const handler = (event, context) => {
   routes.forEach(route => {
     app.get(route.path, (req, res) =>
       require(resolve(
@@ -33,7 +33,7 @@ exports.handler = (event, context) => {
         '.next',
         'serverless',
         `pages${route.page}.js`,
-      ).render(req, res)),
+      )).render(req, res),
     );
 
     return awsServerlessExpress.proxy(

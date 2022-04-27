@@ -1,6 +1,7 @@
 service: nextjs-serverless
 
 plugins:
+  - serverless-webpack
   - serverless-offline
   # - serverless-domain-manager
 
@@ -13,6 +14,11 @@ custom:
   serverless-offline:
     httpPort: 3000
     lambdaPort: 3001
+  webpack:
+    webpackConfig: webpack.server.js
+    includeModules:
+      forceExclude:
+        - aws-sdk
 
 provider:
   name: aws
@@ -40,7 +46,7 @@ provider:
 functions:
   server:
     description: nextjs-serverless server handler
-    handler: server/serverless/serverless.handler
+    handler: src/server/serverless.handler
     memorySize: 128
     tracing: true
     events:

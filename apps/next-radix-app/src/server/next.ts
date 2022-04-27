@@ -1,6 +1,6 @@
-const next = require('next');
-const routes = require('../routes');
-const app = require('../app');
+import next from 'next';
+import routes from '../routes';
+import app from '../app';
 
 const PORT = process.env.PORT || 3000;
 

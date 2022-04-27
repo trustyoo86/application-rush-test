@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
   target: 'serverless',
+  useFileSystemPublicRoutes: false,
   reactStrictMode: true,
   images: {
     loader: 'akamai',
