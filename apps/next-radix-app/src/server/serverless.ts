@@ -25,16 +25,10 @@ const binaryMimeTypes = [
 
 export const handler = (event, context) => {
   routes.forEach(route => {
-    app.get(route.path, (req, res) =>
-      require(resolve(
-        __dirname,
-        '..',
-        '..',
-        '.next',
-        'serverless',
-        `pages${route.page}.js`,
-      )).render(req, res),
-    );
+    app.get(route.path, (req, res) => {
+      console.log(req.originalUrl);
+      require(`../../build/serverless/pages${route.page}.js`).render(req, res);
+    });
 
     return awsServerlessExpress.proxy(
       awsServerlessExpress.createServer(app, null, binaryMimeTypes),

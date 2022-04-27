@@ -21,7 +21,9 @@
     "@aws-cdk/aws-s3": "~1.139.0",
     "@art/eslint-config": "~1.0.0",
     "express": "~4.18.0",
-    "aws-serverless-express": "~3.4.0"
+    "aws-serverless-express": "~3.4.0",
+    "helmet": "~5.0.2",
+    "compression": "~1.7.4"
   },
   "devDependencies": {
     "@types/node": "17.0.6",
@@ -39,7 +41,10 @@
     "webpack-cli": "~4.9.2",
     "babel-loader": "~8.2.5",
     "ts-loader": "~8.4.0",
-    "path": "~0.12.7"
+    "path": "~0.12.7",
+    "critters": "~0.0.16",
+    "serverless-prune-plugin": "~2.0.1",
+    "serverless-plugin-warmup": "~7.1.0"
   },
   "lint-staged": {
     "**/*.{ts,tsx}": [

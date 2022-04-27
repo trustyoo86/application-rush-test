@@ -3,6 +3,8 @@ service: nextjs-serverless
 plugins:
   - serverless-webpack
   - serverless-offline
+  - serverless-prune-plugin
+  - serverless-plugin-warmup
   # - serverless-domain-manager
 
 # include:
@@ -12,13 +14,18 @@ plugins:
 
 custom:
   serverless-offline:
-    httpPort: 3000
-    lambdaPort: 3001
+    httpPort: 8080
   webpack:
     webpackConfig: webpack.server.js
-    includeModules:
-      forceExclude:
-        - aws-sdk
+    # includeModules:
+    #   forceExclude:
+    #     - aws-sdk
+  prune:
+    automatic: true
+    number: 5
+  warmup:
+    default: production
+    prewarm: true
 
 provider:
   name: aws

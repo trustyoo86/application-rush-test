@@ -13,7 +13,8 @@ module.exports = {
 
   target: 'node',
 
-  externals: [nodeExternals(), 'aws-sdk'],
+  // externals: [nodeExternals(), 'aws-sdk'],
+  externals: [nodeExternals()],
 
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.jsx'],

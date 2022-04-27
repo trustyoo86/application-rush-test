@@ -7,6 +7,16 @@ module.exports = {
     loader: 'akamai',
     path: '',
   },
+  distDir: 'build',
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.resolve.fallback = {
+        fs: false,
+      };
+    }
+
+    return config;
+  },
   // assetPrefix:
   //   'http://nextjs-deploy-practice.s3-website.ap-northeast-2.amazonaws.com',
   // generateBuildId: async () => {
