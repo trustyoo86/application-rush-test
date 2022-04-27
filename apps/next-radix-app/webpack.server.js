@@ -6,7 +6,7 @@ const path = require('path');
 const isProd = process.env.NODE_ENV === 'production';
 
 module.exports = {
-  mode: isProd ? 'production' : 'development',
+  mode: 'development',
 
   entry:
     process.env.STAGE === 'local' ? './src/server/next.ts' : slsw.lib.entries,

@@ -5,7 +5,7 @@ import app from '../app';
 const PORT = process.env.PORT || 8080;
 
 const nextApp = next({
-  dev: global.__STAGE__ === 'local',
+  dev: true,
 });
 
 const requestHandler = nextApp.getRequestHandler();
