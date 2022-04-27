@@ -7,6 +7,7 @@ module.exports = {
     loader: 'akamai',
     path: '',
   },
+  assetPrefix: '/prod',
   distDir: 'build',
   webpack: (config, { isServer }) => {
     if (!isServer) {

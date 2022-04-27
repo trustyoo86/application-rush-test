@@ -15,6 +15,7 @@ plugins:
 custom:
   serverless-offline:
     httpPort: 8080
+    useChildProcess: true
   webpack:
     webpackConfig: webpack.server.js
     # includeModules:
