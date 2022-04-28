@@ -2,11 +2,13 @@ const slsw = require('serverless-webpack');
 const nodeExternals = require('webpack-node-externals');
 const webpack = require('webpack');
 const path = require('path');
+const Dotenv = require('dotenv-webpack');
 
 const isProd = process.env.NODE_ENV === 'production';
+const STAGE = process.env.STAGE || 'local';
 
 module.exports = {
-  mode: 'development',
+  mode: process.env.STAGE === 'local' ? 'development' : 'production',
 
   entry:
     process.env.STAGE === 'local' ? './src/server/next.ts' : slsw.lib.entries,
@@ -22,7 +24,7 @@ module.exports = {
 
   output: {
     libraryTarget: 'commonjs',
-    path: path.join(__dirname, './next/serverless'),
+    path: path.join(__dirname, './build/server'),
     filename: '[name].js',
   },
 
@@ -64,8 +66,8 @@ module.exports = {
   },
 
   plugins: [
-    new webpack.DefinePlugin({
-      __STAGE__: JSON.stringify(process.env.STAGE),
+    new Dotenv({
+      path: `./envs/env.${STAGE}`,
     }),
   ],
 };

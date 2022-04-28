@@ -1,3 +1,6 @@
+const Dotenv = require('dotenv-webpack');
+const STAGE = process.env.STAGE || 'local';
+
 /** @type {import('next').NextConfig} */
 module.exports = {
   target: 'serverless',
@@ -7,14 +10,23 @@ module.exports = {
     loader: 'akamai',
     path: '',
   },
-  assetPrefix: '/prod',
   distDir: 'build',
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.resolve.fallback = {
-        fs: false,
-      };
-    }
+  webpack: (config, { isServer, dev }) => {
+    // if (!isServer) {
+    //   config.resolve.fallback = {
+    //     fs: false,
+    //   };
+    // }
+
+    console.log('dev ======>', dev);
+
+    config.devtool = 'cheap-module-source-map';
+
+    config.plugins.push(
+      new Dotenv({
+        path: `./envs/env.${STAGE}`,
+      }),
+    );
 
     return config;
   },

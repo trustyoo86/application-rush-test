@@ -40,6 +40,7 @@ specifiers:
   serverless: ~3.15.2
   serverless-domain-manager: ~6.0.3
   serverless-offline: ~8.7.0
+  serverless-plugin-warmup: ~7.1.0
   serverless-prune-plugin: ~2.0.1
   serverless-webpack: ~5.7.0
   ts-loader: ~8.4.0
@@ -90,6 +91,7 @@ dependencies:
   serverless: 3.15.2
   serverless-domain-manager: 6.0.3_serverless@3.15.2
   serverless-offline: 8.7.0_serverless@3.15.2
+  serverless-plugin-warmup: 7.1.0
   serverless-prune-plugin: 2.0.1_serverless@3.15.2
   serverless-webpack: 5.7.0_bee4030b9576e771f7df23290135cbe0
   ts-loader: 8.4.0_webpack@5.72.0
@@ -3764,12 +3766,33 @@ packages:
       is-obj: 2.0.0
     dev: false
 
+  /dotenv-defaults/2.0.2:
+    resolution: {integrity: sha512-iOIzovWfsUHU91L5i8bJce3NYK5JXeAwH50Jh6+ARUdLiiGlYWfGw6UkzsYqaXZH/hjE/eCd/PlfM/qqyK0AMg==}
+    dependencies:
+      dotenv: 8.6.0
+    dev: false
+
   /dotenv-expand/5.1.0:
     resolution: {integrity: sha512-YXQl1DSa4/PQyRfgrv6aoNjhasp/p4qs9FjJ4q4cQk+8m4r6k4ZSiEyytKG8f8W9gi8WsQtIObNmKd+tMzNTmA==}
     dev: false
 
+  /dotenv-webpack/7.1.0_webpack@5.72.0:
+    resolution: {integrity: sha512-+aUOe+nqgLerA/n611oyC15fY79BIkGm2fOxJAcHDonMZ7AtDpnzv/Oe591eHAenIE0t6w03UyxDnLs/YUxx5Q==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      webpack: ^4 || ^5
+    dependencies:
+      dotenv-defaults: 2.0.2
+      webpack: 5.72.0_webpack-cli@4.9.2
+    dev: false
+
   /dotenv/10.0.0:
     resolution: {integrity: sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==}
+    engines: {node: '>=10'}
+    dev: false
+
+  /dotenv/8.6.0:
+    resolution: {integrity: sha512-IrPdXQsk2BbzvCBGBOTmmSH5SodmqZNt4ERAZDmW4CT+tL8VtvinqywuANaFu4bOMWki16nqf0e4oC0QIaDr/g==}
     engines: {node: '>=10'}
     dev: false
 
@@ -10822,7 +10845,7 @@ packages:
     dev: false
 
   file:projects/next-radix-app.tgz:
-    resolution: {integrity: sha512-kVmbo5pirJi1vcEKDpLjKKxINFbmk1kJVirHdQcrS6tsWLO2esRiEZQBrtsXiWhyFKOKub+DqxDFvYfro9sE5Q==, tarball: file:projects/next-radix-app.tgz}
+    resolution: {integrity: sha512-2cDAQUlfRWBakHiQXzJhIe+i5IzGWVjWPZU/g804tOlGfBg8SVXRZxnjMVBanKV08FIB29Y6FttlpN3YP7l5lQ==, tarball: file:projects/next-radix-app.tgz}
     name: '@rush-temp/next-radix-app'
     version: 0.0.0
     dependencies:
@@ -10834,6 +10857,7 @@ packages:
       babel-loader: 8.2.5_webpack@5.72.0
       compression: 1.7.4
       critters: 0.0.16
+      dotenv-webpack: 7.1.0_webpack@5.72.0
       eslint: 8.6.0
       eslint-config-next: 12.0.7_7d5ff8d8e1054d856b46ec86cec9a25f
       express: 4.18.0

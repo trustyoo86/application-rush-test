@@ -9,6 +9,10 @@
     "start": "next start",
     "lint": "next lint",
     "start:dev": "serverless offline start",
+    "local": "run-s local:build local:start",
+    "local:next:build": "STAGE=local next build",
+    "local:build": "STAGE=local webpack --config ./webpack.server.js --progress",
+    "local:start": "STAGE=local node ./build/server/main.js",
     "development": "run-s development:build development:start",
     "development:build": "STAGE=development next build",
     "development:start": "STAGE=development serverless offline start"
@@ -44,7 +48,8 @@
     "path": "~0.12.7",
     "critters": "~0.0.16",
     "serverless-prune-plugin": "~2.0.1",
-    "serverless-plugin-warmup": "~7.1.0"
+    "serverless-plugin-warmup": "~7.1.0",
+    "dotenv-webpack": "~7.1.0"
   },
   "lint-staged": {
     "**/*.{ts,tsx}": [
