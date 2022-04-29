@@ -407,6 +407,10 @@
     {
       "packageName": "react-18-app",
       "projectFolder": "apps/react-18-app"
+    },
+    {
+      "packageName": "next-aws-app",
+      "projectFolder": "apps/next-aws-app"
     }
     // {
     //   /**
