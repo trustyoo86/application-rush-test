@@ -1,8 +1,19 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+  return (
+    <>
+      {/* <Head>
+        <meta
+          httpEquiv="Content-Security-Policy"
+          content="script-src 'unsafe-eval'"
+        />
+      </Head> */}
+      <Component {...pageProps} />
+    </>
+  );
 }
 
 export default MyApp;
