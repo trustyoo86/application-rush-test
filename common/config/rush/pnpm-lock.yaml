@@ -9560,6 +9560,11 @@ packages:
       serverless: 3.15.2
     dev: false
 
+  /serverless-http/3.0.1:
+    resolution: {integrity: sha512-VEgmMYXvlZ5PLkBAj2IIAGIw25RBsDnLu2fansuaFCmw2fXGUP1VGROfTaEJrjHpZrmvlPu1JRFDNRV8UvDFyw==}
+    engines: {node: '>=12.0'}
+    dev: false
+
   /serverless-offline/8.7.0:
     resolution: {integrity: sha512-OqBfSFk4iuhBx6oXxLLRY7QKNVzBIZBnhgeG/4GmJ+dG93AGYts0BD6Myi5EZALCD8T6WYQiNwHQRPDyGIgz2w==}
     engines: {node: '>=12.0.0'}
@@ -11605,7 +11610,7 @@ packages:
     dev: false
 
   file:projects/next-aws-app.tgz:
-    resolution: {integrity: sha512-Uu4nhZc034yfcmxJ9NqxqwH/Mhq1/TA0EgBDrXTXcTmvoZYxv2GthcuCne3Fz12tNkVuQ2D7uC1m4bOUVcul2A==, tarball: file:projects/next-aws-app.tgz}
+    resolution: {integrity: sha512-6or47xxbKvIKHIy4HhVptaL4NlcrwOR0o0beNePHDgY7ofoGfxOKPJUQrs9xJAEjnBa+ZLopLWxY3lmd1vcnSw==, tarball: file:projects/next-aws-app.tgz}
     name: '@rush-temp/next-aws-app'
     version: 0.0.0
     dependencies:
@@ -11631,6 +11636,7 @@ packages:
       react: 18.1.0
       react-dom: 18.1.0_react@18.1.0
       serverless: 3.16.0
+      serverless-http: 3.0.1
       serverless-offline: 8.7.0_serverless@3.16.0
       serverless-webpack: 5.7.0_825dae44a980efae7544f66f75ab0def
       ts-loader: 9.2.9_typescript@4.6.4+webpack@5.72.0
