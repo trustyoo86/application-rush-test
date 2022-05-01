@@ -12,7 +12,9 @@
     "local:start": "STAGE=local node ./build/server/main.js",
     "development": "run-s development:build development:start",
     "development:build": "STAGE=development next build",
-    "development:start": "STAGE=development serverless offline start"
+    "development:start": "STAGE=development serverless offline start",
+    "development:server:build": "STAGE=development webpack --config ./webpack.server.js",
+    "development:deploy": "STAGE=development sls deploy"
   },
   "dependencies": {
     "next": "12.1.5",
@@ -21,7 +23,8 @@
     "express": "~4.18.0",
     "compression": "~1.7.4",
     "helmet": "~5.0.2",
-    "aws-lambda": "~1.0.7"
+    "aws-lambda": "~1.0.7",
+    "serverless-http": "~3.0.1"
   },
   "devDependencies": {
     "@types/node": "17.0.30",
