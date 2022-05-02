@@ -1,0 +1,19 @@
+service: nextjs-serverless
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: prod
+  region: ap-northeast-2
+
+plugins:
+  - serverless-offline
+  - serverless-plugin-common-excludes
+  - serverless-plugin-include-dependencies
+
+functions:
+  index:
+    handler: server.handler
+    events:
+      - http: ANY /
+      - http: ANY /{proxy+}
