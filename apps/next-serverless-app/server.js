@@ -15,10 +15,10 @@ app.use('/_next/static', express.static('./.next/static'));
 
 app.get('*', require('./.next/serverless/pages/_error').render);
 
-isDev &&
-  app.listen(3000, function () {
-    console.log(`Ready on localhost:3000`);
-  });
+// isDev &&
+//   app.listen(3000, function () {
+//     console.log(`Ready on localhost:3000`);
+//   });
 
 const server = awsServerlessExpress.createServer(app);
 exports.handler = (event, context) => {

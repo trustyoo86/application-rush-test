@@ -31,6 +31,7 @@ specifiers:
   critters: ~0.0.16
   cross-env: ^7.0.3
   depd: ~2.0.0
+  dotenv: ~16.0.0
   dotenv-webpack: ~7.1.0
   eslint-config-prettier: ~8.3.0
   eslint-plugin-prettier: ~4.0.0
@@ -50,6 +51,7 @@ specifiers:
   serverless-http: ~3.0.1
   serverless-offline: ~8.7.0
   serverless-plugin-common-excludes: ~4.0.0
+  serverless-plugin-include-dependencies: ~5.0.0
   serverless-plugin-warmup: ~7.1.0
   serverless-prune-plugin: ~2.0.1
   serverless-webpack: ~5.7.0
@@ -72,7 +74,7 @@ dependencies:
   '@rush-temp/next-aws-app': file:projects/next-aws-app.tgz
   '@rush-temp/next-radix-app': file:projects/next-radix-app.tgz
   '@rush-temp/next-rescript-demo': file:projects/next-rescript-demo.tgz_webpack@5.72.0
-  '@rush-temp/next-serverless-app': file:projects/next-serverless-app.tgz
+  '@rush-temp/next-serverless-app': file:projects/next-serverless-app.tgz_webpack@5.72.0
   '@rush-temp/react-18-app': file:projects/react-18-app.tgz
   '@rush-temp/react-scripts': file:projects/react-scripts.tgz_webpack@5.72.0
   '@rush-temp/remix-app': file:projects/remix-app.tgz
@@ -91,6 +93,7 @@ dependencies:
   critters: 0.0.16
   cross-env: 7.0.3
   depd: 2.0.0
+  dotenv: 16.0.0
   dotenv-webpack: 7.1.0_webpack@5.72.0
   eslint-config-prettier: 8.3.0
   eslint-plugin-prettier: 4.0.0_eslint-config-prettier@8.3.0
@@ -110,6 +113,7 @@ dependencies:
   serverless-http: 3.0.1
   serverless-offline: 8.7.0
   serverless-plugin-common-excludes: 4.0.0
+  serverless-plugin-include-dependencies: 5.0.0
   serverless-plugin-warmup: 7.1.0
   serverless-prune-plugin: 2.0.1
   serverless-webpack: 5.7.0_webpack@5.72.0
@@ -4208,6 +4212,11 @@ packages:
   /dotenv/10.0.0:
     resolution: {integrity: sha512-rlBi9d8jpv9Sf1klPjNfFAuWDjKLwTIJJ/VxtoTwIR6hnZxcEOQCZg2oIL3MWBYw5GpUDKOEnND7LXTbIpQ03Q==}
     engines: {node: '>=10'}
+    dev: false
+
+  /dotenv/16.0.0:
+    resolution: {integrity: sha512-qD9WU0MPM4SWLPJy/r2Be+2WgQj8plChsyrCNQzW/0WjvcJQiKQJ9mH3ZgB3fxbUUxgc/11ZJ0Fi5KiimWGz2Q==}
+    engines: {node: '>=12'}
     dev: false
 
   /dotenv/8.6.0:
@@ -12057,8 +12066,9 @@ packages:
       - webpack
     dev: false
 
-  file:projects/next-serverless-app.tgz:
-    resolution: {integrity: sha512-9e+9Hu5E6qtRpDYB+rt4hKJnXutmyNbnzljX2KKHa4RBMgupDn+pI6+Y1aJiZQ18CAsjviNA/U32LTw2JEve1Q==, tarball: file:projects/next-serverless-app.tgz}
+  file:projects/next-serverless-app.tgz_webpack@5.72.0:
+    resolution: {integrity: sha512-svn6YDkrWeP3zCasR13dA7rr1TaukySZxRCR5J03hHeD3Kp2MhsRyaTemFXEeRni3WzZwOpFLGS9mU9dqZnH/Q==, tarball: file:projects/next-serverless-app.tgz}
+    id: file:projects/next-serverless-app.tgz
     name: '@rush-temp/next-serverless-app'
     version: 0.0.0
     dependencies:
@@ -12067,16 +12077,12 @@ packages:
       '@types/react-dom': 18.0.3
       aws-serverless-express: 3.4.0
       body-parser: 1.20.0
-      debug: 4.3.4
       depd: 2.0.0
-      encodeurl: 1.0.2
-      escape-html: 1.0.3
+      dotenv: 16.0.0
+      dotenv-webpack: 7.1.0_webpack@5.72.0
       eslint: 8.14.0
       eslint-config-next: 12.1.5_58df5dd09292b00352ef003be3866f25
       express: 4.18.1
-      finalhandler: 1.2.0
-      merge-descriptors: 1.0.1
-      ms: 2.1.3
       next: 12.1.5_react-dom@18.1.0+react@18.1.0
       react: 18.1.0
       react-dom: 18.1.0_react@18.1.0
@@ -12096,6 +12102,7 @@ packages:
       - sass
       - supports-color
       - utf-8-validate
+      - webpack
     dev: false
 
   file:projects/react-18-app.tgz:
