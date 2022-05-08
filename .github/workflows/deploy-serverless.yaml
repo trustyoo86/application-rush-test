@@ -19,7 +19,10 @@ jobs:
       matrix:
         node-version: [14.x]
     steps:
-      - uses: actions/checkout@v1
+      - name: repo checkout
+        uses: actions/checkout@v1
+        with:
+          path: lambda
 
       - name: use node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
