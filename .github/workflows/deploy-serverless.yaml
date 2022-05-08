@@ -1,0 +1,45 @@
+name: 'Serverless lambda deploy'
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: '배포 환경 선택'
+        required: true
+        default: 'develop'
+        type: choice
+        options:
+          - develop
+          - prod
+
+jobs:
+  deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: use node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: rush global install
+        run: npm i -g @microsoft/rush
+
+      - name: project deploy
+        run: rush deploy --project next-serverless-app
+
+      - name: project npm install
+        working-directory: ./common/deploy/apps/next-serverless-app
+        run: npm install
+
+      - name: serverless deploy
+        uses: serverless/github-action@v3
+        with:
+          args: deploy
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
