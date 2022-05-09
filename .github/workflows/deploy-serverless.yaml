@@ -24,6 +24,12 @@ jobs:
         with:
           path: lambda
 
+      - name: aws credential settings
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
       - name: use node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
         with:
@@ -38,14 +44,22 @@ jobs:
       - name: project deploy
         run: rush deploy --project next-serverless-app
 
-      - name: project npm install
-        working-directory: ./common/deploy/apps/next-serverless-app
-        run: npm install
+      # - name: project npm install
+      #   working-directory: ./common/deploy/apps/next-serverless-app
+      #   run: npm install
 
-      - name: serverless deploy
-        uses: serverless/github-action@v3
-        with:
-          args: deploy
-        env:
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: project build
+        working-directory: ./common/deploy/apps/next-serverless-app
+        run: npm run build
+
+      - name: project lambda deploy
+        working-directory: ./common/deploy/apps/next-serverless-app
+        run: npm run deploy
+
+      # - name: serverless deploy
+      #   uses: serverless/github-action@v3
+      #   with:
+      #     args: deploy
+      #   env:
+      #     AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #     AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
