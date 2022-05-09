@@ -12,7 +12,21 @@ on:
           - prod
 
 jobs:
-  projeect-settings:
+  # projeect-settings:
+  #   runs-on: ubuntu-latest
+  #   strategy:
+  #     matrix:
+  #       node-version: [14.x]
+  #   steps:
+  #     - name: aws credential settings
+  #       uses: aws-actions/configure-aws-credentials@v1
+  #       with:
+  #         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  #         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  #         aws-region: ap-northeast-2
+
+  deploy:
+    name: deploy
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -25,13 +39,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-northeast-2
 
-  deploy:
-    name: deploy
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        node-version: [14.x]
-    steps:
       - name: repo checkout
         uses: actions/checkout@v1
         with:
