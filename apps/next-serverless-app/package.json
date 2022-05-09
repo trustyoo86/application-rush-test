@@ -7,7 +7,7 @@
     "build": "STAGE=local next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "sls deploy",
+    "deploy": "STAGE=dev sls deploy",
     "offline": "STAGE=local sls offline start"
   },
   "dependencies": {
