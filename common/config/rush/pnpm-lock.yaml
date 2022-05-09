@@ -913,7 +913,7 @@ packages:
     resolution: {integrity: sha512-sA8LAMMlmcspIZw/jeQuJTyA3uGrqOhTBaQE+G9u6DPohqrBFRkaz7RzzJeqXkUXw600occsIBknSjyVd1R67A==}
     dev: false
 
-  /@next/react-dev-overlay/11.1.1_react-dom@18.1.0+react@18.1.0:
+  /@next/react-dev-overlay/11.1.1_react-dom@17.0.2+react@17.0.2:
     resolution: {integrity: sha512-CXc/A0DbSk5VXYu4+zr0fHm52Zh/LhPlLyVPEctJOZL64ccxkls5xGoXvgolJCku9L0pLjJzvdfAmhNLOp5dyw==}
     peerDependencies:
       react: ^17.0.2
@@ -926,8 +926,8 @@ packages:
       css.escape: 1.5.1
       data-uri-to-buffer: 3.0.1
       platform: 1.3.6
-      react: 18.1.0
-      react-dom: 18.1.0_react@18.1.0
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
       shell-quote: 1.7.2
       source-map: 0.8.0-beta.0
       stacktrace-parser: 0.1.10
@@ -4931,7 +4931,7 @@ packages:
       eslint-plugin-jsx-a11y: 6.5.1_eslint@8.15.0
       eslint-plugin-react: 7.29.4_eslint@8.15.0
       eslint-plugin-react-hooks: 4.5.0_eslint@8.15.0
-      next: 11.1.1_cb874132db08f10cb0a2d1c78bb6f9d0
+      next: 11.1.1_a9f5fdd8e51fb7d13725a21068c52fee
       typescript: 4.6.4
     transitivePeerDependencies:
       - supports-color
@@ -8462,7 +8462,7 @@ packages:
       escalade: 3.1.1
     dev: false
 
-  /next/11.1.1_cb874132db08f10cb0a2d1c78bb6f9d0:
+  /next/11.1.1_a9f5fdd8e51fb7d13725a21068c52fee:
     resolution: {integrity: sha512-vfLJDkwAHsZUho5R1K4w49nfYhftUMWNmeNSjCtulOvnRBuEFb7ROyRZOQk7f29rMz02eLQrPZ9yiAmPsexL2g==}
     engines: {node: '>=12.0.0'}
     hasBin: true
@@ -8484,7 +8484,7 @@ packages:
       '@hapi/accept': 5.0.2
       '@next/env': 11.1.1
       '@next/polyfill-module': 11.1.1
-      '@next/react-dev-overlay': 11.1.1_react-dom@18.1.0+react@18.1.0
+      '@next/react-dev-overlay': 11.1.1_react-dom@17.0.2+react@17.0.2
       '@next/react-refresh-utils': 11.1.1_0a7b4b2a9318f8d5f54f4bc85e49a9e8
       '@node-rs/helper': 1.2.1
       assert: 2.0.0
@@ -8518,17 +8518,17 @@ packages:
       process: 0.11.10
       querystring-es3: 0.2.1
       raw-body: 2.4.1
-      react: 18.1.0
-      react-dom: 18.1.0_react@18.1.0
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
       react-is: 17.0.2
       react-refresh: 0.8.3
       stream-browserify: 3.0.0
       stream-http: 3.1.1
       string_decoder: 1.3.0
-      styled-jsx: 4.0.0_react@18.1.0
+      styled-jsx: 4.0.0_react@17.0.2
       timers-browserify: 2.0.12
       tty-browserify: 0.0.1
-      use-subscription: 1.5.1_react@18.1.0
+      use-subscription: 1.5.1_react@17.0.2
       util: 0.12.4
       vm-browserify: 1.1.2
       watchpack: 2.1.1
@@ -11179,7 +11179,7 @@ packages:
       inline-style-parser: 0.1.1
     dev: false
 
-  /styled-jsx/4.0.0_react@18.1.0:
+  /styled-jsx/4.0.0_react@17.0.2:
     resolution: {integrity: sha512-2USeoWMoJ/Lx5s2y1PxuvLy/cz2Yrr8cTySV3ILHU1Vmaw1bnV7suKdblLPjnyhMD+qzN7B1SWyh4UZTARn/WA==}
     peerDependencies:
       react: '>= 16.8.0 || 17.x.x || 18.x.x'
@@ -11188,7 +11188,7 @@ packages:
       '@babel/types': 7.15.0
       convert-source-map: 1.7.0
       loader-utils: 1.2.3
-      react: 18.1.0
+      react: 17.0.2
       source-map: 0.7.3
       string-hash: 1.1.3
       stylis: 3.5.4
@@ -12004,15 +12004,6 @@ packages:
       react: 17.0.2
     dev: false
 
-  /use-subscription/1.5.1_react@18.1.0:
-    resolution: {integrity: sha512-Xv2a1P/yReAjAbhylMfFplFKj9GssgTwN7RlcTxBujFQcloStWNDQdc4g4NRWH9xS4i/FDk04vQBptAXoF3VcA==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0
-    dependencies:
-      object-assign: 4.1.1
-      react: 18.1.0
-    dev: false
-
   /util-deprecate/1.0.2:
     resolution: {integrity: sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=}
     dev: false
@@ -12551,19 +12542,19 @@ packages:
     dev: false
 
   file:projects/amplify-test-app.tgz_webpack@5.72.0:
-    resolution: {integrity: sha512-0aUjiyDbepNWh5rUMEr9sicuMbWdzanMdL/JR+Sgix30Zd7GoReweLKU07bYrxvJUsvaI3VPpv8V3vq1XYPLYw==, tarball: file:projects/amplify-test-app.tgz}
+    resolution: {integrity: sha512-sRcEdAJE54g/i9O+4wMkV5FwlwuhHiqRy6HuslSCnWscZU5NU3WYEM/pWFc4LAT35tjJWtbU5MMo53zAu7Uu1g==, tarball: file:projects/amplify-test-app.tgz}
     id: file:projects/amplify-test-app.tgz
     name: '@rush-temp/amplify-test-app'
     version: 0.0.0
     dependencies:
       '@types/node': 17.0.31
-      '@types/react': 18.0.9
-      '@types/react-dom': 18.0.3
+      '@types/react': 17.0.43
+      '@types/react-dom': 17.0.11
       eslint: 8.15.0
       eslint-config-next: 12.1.6_f0fbe72c8396045f88e4e9549211d472
-      next: 11.1.1_cb874132db08f10cb0a2d1c78bb6f9d0
-      react: 18.1.0
-      react-dom: 18.1.0_react@18.1.0
+      next: 11.1.1_a9f5fdd8e51fb7d13725a21068c52fee
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
       typescript: 4.6.4
     transitivePeerDependencies:
       - '@babel/core'
