@@ -1,0 +1,25 @@
+service: nextjs-serverless
+
+plugins:
+  - serverless-offline
+  - serverless-plugin-common-excludes
+  - serverless-plugin-include-dependencies
+
+custom:
+  serverless-offline:
+    httpPort: 8080
+    useChildProcess: true
+  dotenvVars: ${file(./config.js)}
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  stage: ${self:custom.dotenvVars.STAGE}
+  region: ap-northeast-2
+
+functions:
+  index:
+    handler: server.handler
+    events:
+      - http: ANY /
+      - http: ANY /{proxy+}
