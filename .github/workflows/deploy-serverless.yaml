@@ -22,7 +22,7 @@ jobs:
       - name: repo checkout
         uses: actions/checkout@v1
         with:
-          path: lambda
+          path: main
 
       - name: aws credential settings
         uses: aws-actions/configure-aws-credentials@v1
