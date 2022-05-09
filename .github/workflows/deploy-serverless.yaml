@@ -25,14 +25,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-northeast-2
 
-      - name: use node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: rush global install
-        run: npm i -g @microsoft/rush
-
   deploy:
     name: deploy
     runs-on: ubuntu-latest
@@ -44,6 +36,14 @@ jobs:
         uses: actions/checkout@v1
         with:
           path: main
+
+      - name: use node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      # - name: rush global install
+      #   run: npm i -g @microsoft/rush
 
       # - name: aws credential settings
       #   uses: aws-actions/configure-aws-credentials@v1
@@ -61,10 +61,11 @@ jobs:
       #   run: npm i -g @microsoft/rush
 
       - name: rush update
-        run: rush update
+        # run: rush update
+        run: node ./common/scripts/install-run-rush.js update
 
       - name: project deploy
-        run: rush deploy --project next-serverless-app
+        run: node ./common/scripts/install-run-rush.js update deploy --project next-serverless-app
 
       # - name: project npm install
       #   working-directory: ./common/deploy/apps/next-serverless-app
