@@ -33,7 +33,7 @@ jobs:
         run: npm i -g @microsoft/rush
 
       - name: project install
-        run: rush build --t=next-serverless-app
+        run: rush build -t=next-serverless-app
 
       - name: project deploy
         run: rush deploy --project next-serverless-app
