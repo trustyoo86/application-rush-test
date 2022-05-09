@@ -74,9 +74,9 @@ jobs:
       - name: project deploy
         run: node ./common/scripts/install-run-rush.js deploy --project next-serverless-app
 
-      # - name: project npm install
-      #   working-directory: ./common/deploy/apps/next-serverless-app
-      #   run: npm install
+      - name: project npm install
+        working-directory: ./common/deploy/apps/next-serverless-app
+        run: npm install
 
       - name: project build
         working-directory: ./common/deploy/apps/next-serverless-app
