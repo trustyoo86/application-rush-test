@@ -415,6 +415,10 @@
     {
       "packageName": "next-serverless-app",
       "projectFolder": "apps/next-serverless-app"
+    },
+    {
+      "packageName": "amplify-test-app",
+      "projectFolder": "apps/amplify-test-app"
     }
     // {
     //   /**
