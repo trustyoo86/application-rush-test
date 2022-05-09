@@ -12067,7 +12067,7 @@ packages:
     dev: false
 
   file:projects/next-serverless-app.tgz_webpack@5.72.0:
-    resolution: {integrity: sha512-svn6YDkrWeP3zCasR13dA7rr1TaukySZxRCR5J03hHeD3Kp2MhsRyaTemFXEeRni3WzZwOpFLGS9mU9dqZnH/Q==, tarball: file:projects/next-serverless-app.tgz}
+    resolution: {integrity: sha512-MAcMHW3fE/aR2XMUulVjEPLmG98JfkyN6/IPtTPAS26ZcH5KfFTgXRbfBvp2piiY/ZKodfXNo/YL6Mg3FV8NaQ==, tarball: file:projects/next-serverless-app.tgz}
     id: file:projects/next-serverless-app.tgz
     name: '@rush-temp/next-serverless-app'
     version: 0.0.0
@@ -12077,6 +12077,7 @@ packages:
       '@types/react-dom': 18.0.3
       aws-serverless-express: 3.4.0
       body-parser: 1.20.0
+      critters: 0.0.16
       depd: 2.0.0
       dotenv: 16.0.0
       dotenv-webpack: 7.1.0_webpack@5.72.0

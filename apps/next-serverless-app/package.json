@@ -20,7 +20,8 @@
     "body-parser": "~1.20.0",
     "depd": "~2.0.0",
     "serverless-plugin-common-excludes": "~4.0.0",
-    "serverless-plugin-include-dependencies": "~5.0.0"
+    "serverless-plugin-include-dependencies": "~5.0.0",
+    "critters": "~0.0.16"
   },
   "devDependencies": {
     "@types/node": "17.0.31",

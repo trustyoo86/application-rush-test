@@ -12,18 +12,12 @@ on:
           - prod
 
 jobs:
-  deploy:
-    name: deploy
+  projeect-settings:
     runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [14.x]
     steps:
-      - name: repo checkout
-        uses: actions/checkout@v1
-        with:
-          path: main
-
       - name: aws credential settings
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -38,6 +32,33 @@ jobs:
 
       - name: rush global install
         run: npm i -g @microsoft/rush
+
+  deploy:
+    name: deploy
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [14.x]
+    steps:
+      - name: repo checkout
+        uses: actions/checkout@v1
+        with:
+          path: main
+
+      # - name: aws credential settings
+      #   uses: aws-actions/configure-aws-credentials@v1
+      #   with:
+      #     aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      #     aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      #     aws-region: ap-northeast-2
+
+      # - name: use node.js ${{ matrix.node-version }}
+      #   uses: actions/setup-node@v1
+      #   with:
+      #     node-version: ${{ matrix.node-version }}
+
+      # - name: rush global install
+      #   run: npm i -g @microsoft/rush
 
       - name: rush update
         run: rush update
