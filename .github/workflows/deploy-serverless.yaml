@@ -35,9 +35,6 @@ jobs:
       - name: rush update
         run: rush update
 
-      - name: project install
-        run: rush build -t=next-serverless-app
-
       - name: project deploy
         run: rush deploy --project next-serverless-app
 
