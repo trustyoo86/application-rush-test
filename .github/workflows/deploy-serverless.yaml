@@ -32,6 +32,9 @@ jobs:
       - name: rush global install
         run: npm i -g @microsoft/rush
 
+      - name: rush update
+        run: rush update
+
       - name: project install
         run: rush build -t=next-serverless-app
 
