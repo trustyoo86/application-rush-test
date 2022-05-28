@@ -38,7 +38,6 @@ jobs:
         with:
           amplify_command: configure
           amplify_env: main
-          amplify_arguments: '--appId d32su0hcryv9b6'
           amplify_cli_version: 'latest'
           project_dir: ./common/deploy/apps/amplify-stack-app
         env:
