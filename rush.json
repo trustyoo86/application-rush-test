@@ -419,6 +419,10 @@
     {
       "packageName": "amplify-test-app",
       "projectFolder": "apps/amplify-test-app"
+    },
+    {
+      "packageName": "amplify-stack-app",
+      "projectFolder": "apps/amplify-stack-app"
     }
     // {
     //   /**
