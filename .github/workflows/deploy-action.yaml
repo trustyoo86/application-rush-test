@@ -25,29 +25,36 @@ jobs:
       - name: use node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
 
+      - name: rush update
+        run: node ./common/scripts/install-run-rush.js update
+
+      - name: 'stack-app deploy'
+        run: node ./common/scripts/install-run-rush.js deploy --project amplify-stack-app
+
       - name: configure amplify
         uses: ambientlight/amplify-cli-action@0.3.0
         with:
-          amplify_command: add_env
-          amplify_env: prod
-          amplify_cli_version: '7.6.26'
-          project_dir: './apps/next-radix-app'
+          amplify_command: configure
+          amplify_env: main
+          amplify_arguments: '--appId d32su0hcryv9b6'
+          amplify_cli_version: 'latest'
+          project_dir: ./common/deploy/apps/amplify-stack-app
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS-ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_REGION: ap-northeast-2
 
-      - name: install, build and test
-        run: npm i -g @microsoft/rush
-          rush update
-          rush build -t=next-radix-app
+      - name: next build
+        working-directory: ./common/deploy/apps/amplify-stack-app
+        run: npm run build:dev
 
       - name: deploy
         uses: ambientlight/amplify-cli-action@0.3.0
         with:
-          amplify_command: push
-          amplify_cli_version: '7.6.26'
-          project_dir: './apps/next-radix-app'
+          amplify_command: publish
+          amplify_env: main
+          amplify_cli_version: 'latest'
+          project_dir: ./common/deploy/apps/amplify-stack-app
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS-ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
