@@ -423,6 +423,14 @@
     {
       "packageName": "amplify-stack-app",
       "projectFolder": "apps/amplify-stack-app"
+    },
+    {
+      "packageName": "@art/poc",
+      "projectFolder": "services/poc"
+    },
+    {
+      "packageName": "module-federation-app",
+      "projectFolder": "apps/module-federation-app"
     }
     // {
     //   /**
