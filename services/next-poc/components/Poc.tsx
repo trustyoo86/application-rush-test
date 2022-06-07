@@ -1,5 +1,5 @@
 function Poc() {
-  return <div>Poc component!!!!</div>;
+  return <div>Next-poc</div>;
 }
 
 export default Poc;

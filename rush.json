@@ -431,6 +431,10 @@
     {
       "packageName": "module-federation-app",
       "projectFolder": "apps/module-federation-app"
+    },
+    {
+      "packageName": "next-poc",
+      "projectFolder": "services/next-poc"
     }
     // {
     //   /**
